@@ -5,9 +5,9 @@
 # ----------------------------------------
 
 # === 配置部分 ===
-URL="https://raw.githubusercontent.com/NateScarlet/holiday-cn/refs/heads/master/holiday-cn.ics"   # 要下载的文件URL
+URL="https://example.com/data/file.txt"   # 要下载的文件URL
 SAVE_DIR="/home/user/downloads"           # 文件保存目录
-SAVE_FILE="holiday-cn.ics"                      # 本地文件名
+SAVE_FILE="file.txt"                      # 本地文件名
 LOG_FILE="/home/user/downloads/update.log" # 日志文件
 
 # === 不建议修改以下部分 ===
