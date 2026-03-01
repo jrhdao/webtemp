@@ -1,0 +1,53 @@
+{
+  "log": {
+    "loglevel": "warning"
+  },
+  "inbounds": [
+    {
+      "tag": "reality-443",
+      "port": 443,
+      "protocol": "vless",
+      "settings": {
+        "clients": [
+          {
+            "id": "替换为你的UUID",
+            "flow": "xtls-rprx-vision"
+          }
+        ],
+        "decryption": "none"
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "tcpSettings": {
+          "header": {
+            "type": "none"
+          }
+        },
+        "realitySettings": {
+          "show": false,
+          "dest": "www.cloudflare.com:443",
+          "xver": 0,
+          "serverNames": [
+            "www.cloudflare.com"
+          ],
+          "privateKey": "替换为你的PrivateKey",
+          "maxTimeDiff": 0,
+          "shortIds": [
+            "替换shortId1",
+            "替换shortId2",
+            "替换shortId3"
+          ]
+        }
+      },
+      "sniffing": {
+        "enabled": true,
+        "destOverride": ["http", "tls", "quic"]
+      }
+    }
+  ],
+  "outbounds": [
+    { "protocol": "freedom" },
+    { "protocol": "blackhole", "tag": "block" }
+  ]
+}
